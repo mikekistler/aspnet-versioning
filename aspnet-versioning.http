@@ -1,6 +1,19 @@
-@aspnet_versioning_HostAddress = http://localhost:5217
+@HostAddress = http://localhost:5217
 
-GET {{aspnet_versioning_HostAddress}}/weatherforecast/
+GET {{HostAddress}}/openapi/v1.json
 Accept: application/json
 
 ###
+
+GET {{HostAddress}}/openapi/v2.json
+Accept: application/json
+
+###
+
+GET {{HostAddress}}/hello?api-version=1.0
+Accept: application/json
+
+###
+
+GET {{HostAddress}}/hello?api-version=2.0
+Accept: application/json
